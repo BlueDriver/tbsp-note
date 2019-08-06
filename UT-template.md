@@ -10,7 +10,7 @@
  * 开发时间：2019/7/31 11:35
  * 修改记录：程序版本    修改日期    修改人员    修改单号    修改说明
  *********************************************************/
-@RunWith(Parameterized.class)
+@RunWith(Parameterized.class)//指定运行容器
 @SpringBootTest(classes = ScfbizStarter.class)
 public class ServiceTest extends TcBaseTest {
     private Request req;
@@ -24,7 +24,9 @@ public class ServiceTest extends TcBaseTest {
         this.initTbspRequest(req, "trCode", 10);
         no++;
     }
-
+	/*
+提供数据的方法上加上一个@Parameters注解，这个方法必须是静态static的，并且返回一个集合Collection
+    */
     @Parameterized.Parameters
     public static Collection<Object> data() {
         List<Request> list = CSVSupport.getListFromCSV(Request.class,
