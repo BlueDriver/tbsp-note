@@ -60,6 +60,8 @@ public class ServiceTest extends TcBaseTest {
             DBDeleteSingle("TBSP_JNL",
                     "TR_CODE", req.getHeadTrCode(),
                     "TENANT_ID", req.getHeadTenantId());
+            //DBDeleteSingle("TBSP_JNL", "TR_CODE", req.getHeadTrCode(), "TENANT_ID", req.getHeadTenantId());
+
         }
     }
     
