@@ -72,7 +72,7 @@ ManReq.csv表格视图，增加注释说明
 
 > 自动生成CSV表头的IDEA插件在这：[ingTools](https://github.com/BlueDriver/ingTools)
 
-## `List<Object>`字段的写法
+## `List<Object>`字段的写法（req类）
 
 > 如果Object为`String`，用`list_`后加数据的方式，每个数据之间用`;`分隔，空数据直接·list_·后不写
 ```
@@ -86,3 +86,4 @@ ManReq,desc,name,age,birth,hobby
 1,正例,testdata/acctmanage/generatewacc/GenerateWaccReqDtos.csv@1
 ```
 
+> 注意：上文`List<Object>`的写法***仅仅针对入参`req`类***csv的写法，**不支持**`check`类csv
